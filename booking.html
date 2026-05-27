@@ -1,0 +1,588 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<head>
+    <meta charset="UTF-8">
+    <title>Keziah | Luxury Karoo Accommodation</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="stylesheet" href="style.css">
+    ...
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Request | Keziah</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome (added for consistency with index.html) -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        /* ---- BOOKING PAGE EXTRAS ---- */
+
+        .date-error {
+            color: #c0392b;
+            font-size: 0.78rem;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .date-error.visible {
+            display: block;
+        }
+
+        .guests-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 520px) {
+            .guests-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ---- PRICE SUMMARY BANNER ---- */
+
+        .price-summary {
+            display: none;
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2218 100%);
+            border-radius: 12px;
+            padding: 22px 28px;
+            margin: 8px 0 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .price-summary.visible {
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr 1px 1fr;
+            align-items: center;
+            gap: 0;
+        }
+
+        .price-summary-col {
+            text-align: center;
+            padding: 0 16px;
+        }
+
+        .price-summary-col .ps-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .price-summary-col .ps-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .price-summary-col.highlight .ps-value {
+            font-size: 1.25rem;
+            color: #c9a96e;
+        }
+
+        .price-summary-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.12);
+        }
+
+        .price-summary-note {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 0.72rem;
+            color: #666;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 560px) {
+            .price-summary.visible {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .price-summary-divider {
+                display: none;
+            }
+            .price-summary-col {
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+            }
+            .price-summary-col .ps-label {
+                margin-bottom: 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER (matches index.html)
+    ========================== -->
+
+    <header id="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">Keziah</a>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- NAVIGATION -->
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#rooms">Rooms</a></li>
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- =========================
+         BOOKING SECTION
+    ========================== -->
+
+    <section class="booking-section">
+
+        <div class="booking-overlay"></div>
+
+        <div class="booking-card fade-in">
+
+            <h1>Booking Request</h1>
+
+            <p class="booking-subtitle">
+                Escape to the peaceful beauty of Willowmore.
+                Complete the form below and we'll contact you shortly.
+            </p>
+
+            <form
+                class="booking-form"
+                action="https://api.web3forms.com/submit"
+                method="POST">
+
+                <!-- Web3Forms Settings -->
+                <input type="hidden" name="access_key" value="bcb000aa-fc78-42e2-98e9-0c838e2a6738">
+                <input type="hidden" name="subject" value="New Keziah Booking Request">
+                <input type="hidden" name="from_name" value="Keziah Website">
+                <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
+                <!-- FIRST NAME -->
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="First Name" placeholder="Your First Name" required>
+                </div>
+
+                <!-- LAST NAME -->
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="Last Name" placeholder="Your Last Name" required>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <!-- PHONE (now required) -->
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input
+                        type="tel"
+                        name="Phone Number"
+                        placeholder="+27 63 000 0000"
+                        required>
+                </div>
+
+                <!-- ROOM TYPE -->
+                <div class="form-group">
+                    <label>Room Type</label>
+                    <select name="Room Type" id="room-select" required>
+                        <option value="">Select Room</option>
+                        <option value="Luxury Suite" data-price="1000">Luxury Suite — R1 000/night</option>
+                        <option value="Lavender Room" data-price="800">Lavender Room — R800/night</option>
+                        <option value="Family Deluxe" data-price="1220">Family Deluxe — R1 220/night</option>
+                    </select>
+                </div>
+
+                <!-- CHECK-IN -->
+                <div class="form-group">
+                    <label>Check-In Date</label>
+                    <input type="date" name="Check-In Date" id="checkin-date" required>
+                </div>
+
+                <!-- CHECK-OUT -->
+                <div class="form-group">
+                    <label>Check-Out Date</label>
+                    <input type="date" name="Check-Out Date" id="checkout-date" required>
+                    <span class="date-error" id="date-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        Check-out must be after check-in.
+                    </span>
+                </div>
+
+                <!-- GUESTS -->
+                <div class="guests-row">
+                    <div class="form-group">
+                        <label>Adults</label>
+                        <select name="Adults" required>
+                            <option value="">Select</option>
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Children <span style="font-weight:300;font-size:0.8rem;">(optional)</span></label>
+                        <select name="Children">
+                            <option value="0">No children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                            <option value="4">4 Children</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- PRICE SUMMARY BANNER -->
+                <div class="price-summary" id="price-summary">
+
+                    <div class="price-summary-col">
+                        <div class="ps-label">Room</div>
+                        <div class="ps-value" id="summary-room">—</div>
+                    </div>
+
+                    <div class="price-summary-divider"></div>
+
+                    <div class="price-summary-col">
+                        <div class="ps-label">Duration</div>
+                        <div class="ps-value" id="summary-nights">—</div>
+                    </div>
+
+                    <div class="price-summary-divider"></div>
+
+                    <div class="price-summary-col highlight">
+                        <div class="ps-label">Estimated Total</div>
+                        <div class="ps-value" id="summary-total">—</div>
+                    </div>
+
+                    <div class="price-summary-note">
+                        <i class="fas fa-info-circle"></i>
+                        Estimate only — final amount confirmed on booking. R<span id="summary-rate-inline">0</span>/night.
+                    </div>
+
+                </div>
+
+                <!-- SPECIAL REQUESTS -->
+                <div class="form-group full-width">
+                    <label>Special Requests</label>
+                    <textarea name="Special Requests" placeholder="Anything you'd like us to know?"></textarea>
+                </div>
+
+                <!-- FORM STATUS -->
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+
+                <!-- T&C CHECKBOX -->
+                <div style="
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 12px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 0.85rem;
+                    color: #555;
+                    line-height: 1.6;
+                ">
+                    <input
+                        type="checkbox"
+                        id="agree-terms"
+                        name="agree_terms"
+                        required
+                        style="
+                            margin-top: 3px;
+                            width: 16px;
+                            height: 16px;
+                            accent-color: #c9a96e;
+                            flex-shrink: 0;
+                            cursor: pointer;
+                        ">
+                    <label for="agree-terms">
+                        I have read and agree to the
+                        <a href="legal.html" target="_blank" style="color: #c9a96e; text-decoration: underline;">Terms &amp; Conditions</a>,
+                        <a href="legal.html" target="_blank" style="color: #c9a96e; text-decoration: underline;">Privacy Policy</a>, and
+                        <a href="legal.html" target="_blank" style="color: #c9a96e; text-decoration: underline;">Cancellation Policy</a>
+                        of Keziah Accommodation.
+                        <span style="color: #c0392b;">*</span>
+                    </label>
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="submit">
+                    Send Booking Request
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <div class="container footer-grid">
+
+            <div>
+                <h3>Keziah</h3>
+                <p>Rustic self-catering accommodation in the beautiful Karoo.</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#rooms">Rooms</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="legal.html">Privacy Policy</a></li>
+                    <li><a href="legal.html">Terms &amp; Conditions</a></li>
+                    <li><a href="legal.html">Cancellation Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>+27 63 604 4978</p>
+                <p>Willowmore, Karoo</p>
+            </div>
+
+        </div>
+
+        <div style="
+            text-align: center;
+            padding: 16px 0 10px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 24px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem;
+            color: #888;
+        ">
+            &copy; 2025 Keziah Accommodation, Willowmore. All rights reserved. &nbsp;|&nbsp;
+            <a href="legal.html" style="color: #c9a96e;">Privacy &amp; Legal</a>
+        </div>
+
+    </footer>
+
+    <!-- =========================
+         WHATSAPP BUTTON (matches index.html)
+    ========================== -->
+
+    <a href="https://wa.me/27636044978" class="whatsapp-btn" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* ---- HEADER: HAMBURGER ---- */
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        /* ---- HEADER: SCROLL SHRINK ---- */
+        window.addEventListener('scroll', () => {
+            document.getElementById('header')
+                .classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        /* ---- FADE-IN ON LOAD ---- */
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        function checkFade() {
+            fadeElements.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        checkFade();
+
+        /* ---- PRE-SELECT ROOM FROM URL ---- */
+        const roomSelect = document.getElementById('room-select');
+        const selectedRoom = new URLSearchParams(window.location.search).get('room');
+        if (selectedRoom && roomSelect) roomSelect.value = selectedRoom;
+
+        /* ---- PRICE CALCULATOR ---- */
+        const checkinInput  = document.getElementById('checkin-date');
+        const checkoutInput = document.getElementById('checkout-date');
+        const priceSummary  = document.getElementById('price-summary');
+        const dateError     = document.getElementById('date-error');
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        checkinInput.setAttribute('min', today);
+        checkoutInput.setAttribute('min', today);
+
+        const roomPrices = {
+            'Luxury Suite':  1000,
+            'Lavender Room': 800,
+            'Family Deluxe': 1220
+        };
+
+        function updatePriceSummary() {
+
+            const room     = roomSelect.value;
+            const checkin  = checkinInput.value;
+            const checkout = checkoutInput.value;
+
+            // Date validation
+            if (checkin && checkout) {
+                const inDate  = new Date(checkin);
+                const outDate = new Date(checkout);
+
+                if (outDate <= inDate) {
+                    dateError.classList.add('visible');
+                    checkoutInput.setCustomValidity('Check-out must be after check-in.');
+                    priceSummary.classList.remove('visible');
+                    return;
+                } else {
+                    dateError.classList.remove('visible');
+                    checkoutInput.setCustomValidity('');
+                }
+            }
+
+            // Show summary only when all three values are set
+            if (!room || !checkin || !checkout) {
+                priceSummary.classList.remove('visible');
+                return;
+            }
+
+            const nights = Math.round(
+                (new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24)
+            );
+
+            const rate  = roomPrices[room] || 0;
+            const total = nights * rate;
+
+            document.getElementById('summary-room').textContent        = room;
+            document.getElementById('summary-rate-inline').textContent  = rate.toLocaleString();
+            document.getElementById('summary-nights').textContent       = `${nights} night${nights !== 1 ? 's' : ''}`;
+            document.getElementById('summary-total').textContent        = `R${total.toLocaleString()}`;
+
+            priceSummary.classList.add('visible');
+        }
+
+        // Enforce check-out min date when check-in changes
+        checkinInput.addEventListener('change', () => {
+            if (checkinInput.value) {
+                checkoutInput.setAttribute('min', checkinInput.value);
+            }
+            updatePriceSummary();
+        });
+
+        checkoutInput.addEventListener('change', updatePriceSummary);
+        roomSelect.addEventListener('change', updatePriceSummary);
+
+        // Run on load in case room was pre-selected from URL
+        updatePriceSummary();
+
+        /* ---- FORM SUBMISSION ---- */
+        const bookingForm = document.querySelector('.booking-form');
+        const formStatus  = document.getElementById('form-status');
+
+        bookingForm.addEventListener('submit', async event => {
+
+            event.preventDefault();
+
+            // Block if date error is showing
+            if (dateError.classList.contains('visible')) {
+                formStatus.classList.add('error');
+                formStatus.textContent = 'Please fix the date error before submitting.';
+                return;
+            }
+
+            const submitButton = bookingForm.querySelector('button[type="submit"]');
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending…';
+            formStatus.classList.remove('error');
+            formStatus.textContent = 'Sending booking request...';
+
+            try {
+
+                const response = await fetch(bookingForm.action, {
+                    method: 'POST',
+                    body: new FormData(bookingForm),
+                    headers: { Accept: 'application/json' }
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    bookingForm.reset();
+                    window.location.href = 'thankyou.html';
+                    return;
+                }
+
+                throw new Error(result.message || 'Booking request could not be sent.');
+
+            } catch (error) {
+
+                formStatus.classList.add('error');
+                formStatus.textContent = error.message || 'Something went wrong. Please try again.';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Booking Request';
+            }
+        });
+
+    </script>
+
+</body>
+</html>

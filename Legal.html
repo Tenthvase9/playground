@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<head>
+    <meta charset="UTF-8">
+    <title>Keziah | Luxury Karoo Accommodation</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="stylesheet" href="style.css">
+    ...
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal | Keziah Accommodation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        /* ---- LEGAL PAGE STYLES ---- */
+
+        .legal-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            padding: 120px 0 60px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .legal-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .legal-hero p {
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        /* ---- TABS ---- */
+
+        .legal-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 40px 20px 0;
+            background: #f9f7f4;
+        }
+
+        .legal-tab-btn {
+            padding: 10px 24px;
+            border: 2px solid #c9a96e;
+            background: transparent;
+            color: #333;
+            border-radius: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .legal-tab-btn:hover,
+        .legal-tab-btn.active {
+            background: #c9a96e;
+            color: #fff;
+        }
+
+        /* ---- CONTENT ---- */
+
+        .legal-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 50px 24px 80px;
+            background: #f9f7f4;
+        }
+
+        .legal-section {
+            display: none;
+        }
+
+        .legal-section.active {
+            display: block;
+        }
+
+        .legal-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .legal-section .last-updated {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        .legal-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 28px 0 8px;
+        }
+
+        .legal-section p,
+        .legal-section li {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.85;
+        }
+
+        .legal-section ul {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        .legal-section ul li {
+            margin-bottom: 6px;
+        }
+
+        .legal-highlight {
+            background: #fff8ee;
+            border-left: 4px solid #c9a96e;
+            padding: 16px 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 0.88rem;
+            color: #555;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.75;
+        }
+
+        .legal-contact-block {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 24px 28px;
+            border-radius: 8px;
+            margin-top: 32px;
+        }
+
+        .legal-contact-block p {
+            color: #ccc;
+            margin: 4px 0;
+            font-size: 0.88rem;
+        }
+
+        .legal-contact-block a {
+            color: #c9a96e;
+        }
+
+        /* ---- BACK LINK ---- */
+
+        .legal-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #c9a96e;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            text-decoration: none;
+            margin: 30px 0 0 24px;
+        }
+
+        .legal-back:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Keziah</a>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#rooms">Rooms</a></li>
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- LEGAL HERO -->
+    <div class="legal-hero">
+        <h1>Legal Information</h1>
+        <p>Privacy Policy &bull; Terms &amp; Conditions &bull; Cancellation Policy</p>
+    </div>
+
+    <!-- BACK LINK -->
+    <a href="index.html" class="legal-back">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <!-- TABS -->
+    <div class="legal-tabs">
+        <button class="legal-tab-btn active" data-tab="privacy">Privacy Policy</button>
+        <button class="legal-tab-btn" data-tab="terms">Terms &amp; Conditions</button>
+        <button class="legal-tab-btn" data-tab="cancellation">Cancellation &amp; Refunds</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="legal-content">
+
+        <!-- ========================
+             PRIVACY POLICY
+        ========================= -->
+
+        <div class="legal-section active" id="tab-privacy">
+
+            <h2>Privacy Policy</h2>
+            <span class="last-updated">Last updated: May 2025</span>
+
+            <div class="legal-highlight">
+                Keziah Accommodation is committed to protecting your personal information
+                in accordance with the Protection of Personal Information Act (POPIA), Act 4 of 2013
+                (South Africa).
+            </div>
+
+            <h3>1. Who We Are</h3>
+            <p>
+                Keziah Accommodation ("we", "us", "our") operates self-catering accommodation at
+                97 Wehmeyer Street, Willowmore, Karoo, South Africa. We are the responsible party
+                for the personal information we collect from you.
+            </p>
+
+            <h3>2. What Information We Collect</h3>
+            <p>When you make a booking or contact us, we may collect:</p>
+            <ul>
+                <li>Full name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Booking dates and room preferences</li>
+                <li>Payment reference information</li>
+                <li>Any additional information you voluntarily provide</li>
+            </ul>
+            <p>
+                We also collect limited technical data when you visit our website, such as your
+                browser type and pages visited, through standard web technology.
+            </p>
+
+            <h3>3. Why We Collect Your Information</h3>
+            <p>We use your personal information to:</p>
+            <ul>
+                <li>Process and confirm your accommodation booking</li>
+                <li>Communicate with you about your stay</li>
+                <li>Respond to enquiries and support requests</li>
+                <li>Send booking confirmations and relevant updates</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+            <p>We will not use your information for unsolicited marketing without your consent.</p>
+
+            <h3>4. How We Store and Protect Your Information</h3>
+            <p>
+                Your personal information is stored securely and is only accessible to authorised
+                personnel. We take reasonable technical and organisational steps to prevent
+                unauthorised access, loss, or misuse of your data.
+            </p>
+            <p>
+                We retain your booking information for a reasonable period as required for
+                business records and legal compliance, after which it is securely deleted.
+            </p>
+
+            <h3>5. Sharing Your Information</h3>
+            <p>
+                We do not sell or trade your personal information. We may share it only where
+                required by law, or with service providers who assist in operating our business
+                (such as payment processors), under strict confidentiality obligations.
+            </p>
+
+            <h3>6. Your Rights Under POPIA</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access the personal information we hold about you</li>
+                <li>Request correction of inaccurate information</li>
+                <li>Request deletion of your personal information (subject to legal requirements)</li>
+                <li>Object to the processing of your information</li>
+                <li>Lodge a complaint with the Information Regulator of South Africa</li>
+            </ul>
+
+            <h3>7. Cookies</h3>
+            <p>
+                Our website may use cookies and similar technologies to improve your browsing
+                experience. Some third-party services we use (such as Google Fonts and Font Awesome)
+                may also set cookies. You can control cookie settings through your browser.
+            </p>
+
+            <h3>8. Contact Our Information Officer</h3>
+            <p>
+                For any privacy-related queries or to exercise your rights, please contact us:
+            </p>
+
+            <div class="legal-contact-block">
+                <p><strong style="color:#fff;">Keziah Accommodation</strong></p>
+                <p>97 Wehmeyer Street, Willowmore, Karoo</p>
+                <p>Phone: <a href="tel:+27636044978">+27 63 604 4978</a></p>
+                <p>Email: <a href="mailto:info@keziah.co.za">info@keziah.co.za</a></p>
+            </div>
+
+        </div>
+
+        <!-- ========================
+             TERMS & CONDITIONS
+        ========================= -->
+
+        <div class="legal-section" id="tab-terms">
+
+            <h2>Terms &amp; Conditions</h2>
+            <span class="last-updated">Last updated: May 2025</span>
+
+            <p>
+                Please read these terms carefully before making a booking. By confirming a
+                reservation with Keziah Accommodation, you agree to be bound by these terms.
+            </p>
+
+            <h3>1. Bookings</h3>
+            <p>
+                A booking is confirmed once you receive written confirmation from us (via WhatsApp
+                or email) and a deposit has been received where applicable. We reserve the right to
+                decline any booking at our discretion.
+            </p>
+
+            <h3>2. Payment</h3>
+            <ul>
+                <li>A deposit may be required to secure your booking.</li>
+                <li>The remaining balance is due on or before arrival.</li>
+                <li>Accepted payment methods will be confirmed at the time of booking.</li>
+                <li>Prices are quoted in South African Rand (ZAR) and are subject to change.</li>
+            </ul>
+
+            <h3>3. Check-In &amp; Check-Out</h3>
+            <ul>
+                <li>Standard check-in: 14:00</li>
+                <li>Standard check-out: 10:00</li>
+                <li>Early check-in or late check-out may be available on request, subject to availability.</li>
+            </ul>
+
+            <h3>4. Guest Responsibilities</h3>
+            <p>Guests are expected to:</p>
+            <ul>
+                <li>Treat the property and its contents with care and respect</li>
+                <li>Not exceed the maximum number of guests for the room booked</li>
+                <li>Comply with any house rules provided at check-in</li>
+                <li>Not engage in any illegal activity on the premises</li>
+                <li>Report any damage or breakage immediately</li>
+            </ul>
+            <p>
+                Guests will be held liable for any damage caused to the property beyond
+                normal wear and tear.
+            </p>
+
+            <h3>5. Liability</h3>
+            <p>
+                Keziah Accommodation shall not be held liable for any loss, injury, theft, or
+                damage to guests or their personal belongings during their stay. Guests are
+                encouraged to take out appropriate travel insurance. Vehicles are parked at the
+                owner's risk.
+            </p>
+
+            <h3>6. Noise &amp; Conduct</h3>
+            <p>
+                We ask all guests to be considerate of other guests and neighbours. Excessive
+                noise, disruptive behaviour, or conduct that disturbs the peace will result in
+                immediate termination of the stay without refund.
+            </p>
+
+            <h3>7. Pets</h3>
+            <p>
+                Pets are not permitted on the premises unless specifically agreed to in writing
+                prior to arrival.
+            </p>
+
+            <h3>8. Photography</h3>
+            <p>
+                Images displayed on our website are for illustrative purposes and are representative
+                of the property. Minor variations may exist.
+            </p>
+
+            <h3>9. Governing Law</h3>
+            <p>
+                These terms are governed by the laws of the Republic of South Africa, including
+                the Consumer Protection Act (CPA), Act 68 of 2008. Any disputes will be subject
+                to the jurisdiction of South African courts.
+            </p>
+
+            <h3>10. Changes to These Terms</h3>
+            <p>
+                We reserve the right to update these terms at any time. The most current version
+                will always be available on our website.
+            </p>
+
+            <div class="legal-contact-block">
+                <p><strong style="color:#fff;">Questions about these terms?</strong></p>
+                <p>Phone: <a href="tel:+27636044978">+27 63 604 4978</a></p>
+                <p>Email: <a href="mailto:info@keziah.co.za">info@keziah.co.za</a></p>
+            </div>
+
+        </div>
+
+        <!-- ========================
+             CANCELLATION POLICY
+        ========================= -->
+
+        <div class="legal-section" id="tab-cancellation">
+
+            <h2>Cancellation &amp; Refund Policy</h2>
+            <span class="last-updated">Last updated: May 2025</span>
+
+            <div class="legal-highlight">
+                We understand that plans can change. Please read our cancellation policy carefully
+                before making a booking, as it forms part of your agreement with us.
+            </div>
+
+            <h3>1. Cancellation by the Guest</h3>
+            <ul>
+                <li>
+                    <strong>More than 14 days before arrival:</strong> Full refund of any deposit paid,
+                    minus a 10% administration fee.
+                </li>
+                <li>
+                    <strong>7 to 14 days before arrival:</strong> 50% of the total booking value will
+                    be forfeited.
+                </li>
+                <li>
+                    <strong>Less than 7 days before arrival:</strong> No refund will be issued.
+                </li>
+                <li>
+                    <strong>No-show:</strong> The full booking amount will be forfeited.
+                </li>
+            </ul>
+
+            <h3>2. How to Cancel</h3>
+            <p>
+                All cancellations must be submitted in writing via WhatsApp or email.
+                Cancellations are only confirmed once acknowledged by us in writing.
+                The cancellation date will be based on the date we receive written notification.
+            </p>
+
+            <h3>3. Refund Processing</h3>
+            <p>
+                Where a refund is due, it will be processed within 7 to 10 business days to
+                the original payment method used.
+            </p>
+
+            <h3>4. Cancellation by Keziah</h3>
+            <p>
+                In the unlikely event that we need to cancel your booking due to circumstances
+                beyond our control (force majeure, unforeseen property issues, etc.), you will
+                receive a full refund of any payments made. We will make every effort to notify
+                you as early as possible and to assist in finding alternative accommodation.
+            </p>
+
+            <h3>5. Changes to Bookings</h3>
+            <p>
+                Requests to change booking dates are subject to availability and must be made
+                in writing. We will do our best to accommodate changes at no extra charge, but
+                this cannot be guaranteed.
+            </p>
+
+            <h3>6. Consumer Protection Act (CPA)</h3>
+            <p>
+                Under the Consumer Protection Act 68 of 2008, consumers may have additional
+                rights regarding cancellations. In the event of a conflict between this policy
+                and the CPA, the CPA will take precedence.
+            </p>
+
+            <div class="legal-contact-block">
+                <p><strong style="color:#fff;">To cancel or change a booking:</strong></p>
+                <p>WhatsApp: <a href="https://wa.me/27636044978">+27 63 604 4978</a></p>
+                <p>Email: <a href="mailto:info@keziah.co.za">info@keziah.co.za</a></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#rooms">Rooms</a></li>
+                    <li><a href="index.html#explore">Explore</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Phone: +27 63 604 4978</p>
+                <p>97 Wehmeyer Street, Willowmore, Karoo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TAB SCRIPT -->
+    <script>
+
+        document.querySelectorAll('.legal-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+
+                document.querySelectorAll('.legal-tab-btn')
+                    .forEach(b => b.classList.remove('active'));
+
+                document.querySelectorAll('.legal-section')
+                    .forEach(s => s.classList.remove('active'));
+
+                btn.classList.add('active');
+
+                document.getElementById('tab-' + btn.dataset.tab)
+                    .classList.add('active');
+
+                window.scrollTo({ top: 300, behavior: 'smooth' });
+            });
+        });
+
+        // Mobile menu
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Header shrink
+        window.addEventListener('scroll', () => {
+            document.getElementById('header')
+                .classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+    </script>
+
+</body>
+</html>

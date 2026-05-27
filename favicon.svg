@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+  <!-- Sky background -->
+  <rect width="64" height="64" rx="14" fill="#ddeaf5"/>
+
+  <!-- Sun -->
+  <circle cx="32" cy="22" r="8" fill="#f0c070"/>
+
+  <!-- Far koppies (light) -->
+  <polygon points="2,42 14,28 26,42" fill="#b0c4d4" opacity="0.6"/>
+  <polygon points="20,42 33,26 46,42" fill="#8fa8bc" opacity="0.7"/>
+  <polygon points="38,42 52,32 66,42" fill="#b0c4d4" opacity="0.6"/>
+
+  <!-- Ground -->
+  <path d="M0 42 h64 v12 q0 10-10 10 H10 q-10 0-10-10 z" fill="#c9a96e"/>
+
+</svg>
