@@ -1,17 +1,4 @@
-{
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "playground",
-  "compatibility_date": "2026-05-27",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "."
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
-}
+
 {
   "observability": {
     "enabled": false,
